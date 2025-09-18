@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agenda Telefónica</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>Agenda telefónica</h1>
+    <form id="form">
+      <div><label for="id">ID</label><input id="id" type="number" min="1" step="1" required></div>
+      <div><label for="nombre">Nombre</label><input id="nombre" type="text" required></div>
+      <div><label for="telefono">Teléfono</label><input id="telefono" type="tel" required></div>
+      <div><label for="email">Email</label><input id="email" type="email"></div>
+      <div class="row">
+        <button id="crear" type="button">Crear</button>
+        <button id="actualizar" type="button">Actualizar</button>
+        <button id="limpiar" type="reset">Limpiar</button>
+      </div>
+      <div id="msg"></div>
+    </form>
+    <table>
+      <thead><tr><th>ID</th><th>Nombre</th><th>Teléfono</th><th>Email</th><th>Acciones</th></tr></thead>
+      <tbody id="lista"></tbody>
+    </table>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
